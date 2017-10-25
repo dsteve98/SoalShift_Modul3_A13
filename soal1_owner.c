@@ -35,7 +35,7 @@ void main()
             scanf("%s%d",comp,&total);
             for(it=0;it<6;it++){
                 if(!strcmp(comp,nama[it])){
-                senjata += total;
+                senjata[it] += total;
                 break;
                 }
             }
