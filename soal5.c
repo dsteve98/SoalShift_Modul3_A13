@@ -6,6 +6,5 @@
 
 int main(int argc, char *argv[]){
 printf("%d",argc);
-printf("%s",argv[0]);
-printf("%s",argv[1]);
+for(int i=1;i<argc;i++)printf("%s",argv[i]);
 }
