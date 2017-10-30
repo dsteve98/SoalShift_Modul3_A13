@@ -8,7 +8,10 @@
 void *factorial(void *fac){
     int *qq = (int *)fac;
     int ctr=*qq,ans=1;
-    printf("%d\n",ctr);
+    for(int iter=1;iter<=ctr;iter++){
+    ans=ans*iter;
+    }
+    printf("hasil %d! = %d\n",ctr,ans);
 }
 
 int main(int argc, char *argv[]){
@@ -18,7 +21,7 @@ int main(int argc, char *argv[]){
         num[i] = atoi(argv[i+1]);
         mun=&num[i];
         hhee=*mun;
-        printf("%d--%d--%d\n",num[i],*mun,hhee);
+        //printf("%d--%d--%d\n",num[i],*mun,hhee);
         pthread_create(&thd[i],NULL,&factorial,(void *) mun);
     }
     for(int i=0;i<argc-1;i++){
